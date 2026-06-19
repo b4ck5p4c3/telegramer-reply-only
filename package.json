@@ -1,0 +1,26 @@
+{
+  "name": "@bksp/telegramer-reply-only",
+  "license": "MPL-2.0",
+  "module": "src/index.ts",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@bksp/style-guide": "^1.5.0",
+    "@types/bun": "latest",
+    "eslint": "9"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "commander": "^15.0.0",
+    "grammy": "^1.44.0",
+    "zod": "4"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "start": "bun run src/index.ts",
+    "build": "bun build --compile --minify --sourcemap --outfile ./dist/telegramer-reply-only ./src/index.ts"
+  }
+}
