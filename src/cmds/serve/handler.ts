@@ -11,7 +11,7 @@ handler.on('message', context => {
     return
   }
 
-  if (context.msg.reply_to_message) {
+  if (context.msg.reply_to_message || context.msg.is_automatic_forward) {
     return
   }
 
